@@ -22,7 +22,7 @@ vi ./config.json
   "adminAccount": "admin@admin.com",
   "db": {
     "servername": "127.0.0.1",
-    "DATABASE":  "yapi",
+    "database":  "yapi",
     "port": 27017,
     "user": "yapi",
     "pass": "yapi123"

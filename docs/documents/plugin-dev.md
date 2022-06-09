@@ -12,7 +12,7 @@ npm run dev #启动开发服务器
   "port": "3000",
   "db": {
     "servername": "127.0.0.1",
-    "DATABASE": "yapi"
+    "database": "yapi"
   },
   ...
   "plugins": [{

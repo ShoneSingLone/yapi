@@ -86,7 +86,7 @@ class statisMockController extends baseController {
   async getSystemStatus(ctx) {
     try {
       let mail = '';
-      if (yapi.WEBCONFIG.mail && yapi.WEBCONFIG.mail.enable) {
+      if (yapi.configs.mail && yapi.configs.mail.enable) {
         mail = await this.checkEmail();
         // return ctx.body = yapi.commons.resReturn(result);
       } else {

@@ -20,11 +20,11 @@ class baseModel {
       });
     }
 
-    this.model = yapi.db(this.name, this.schema);
+    this.model = yapi.dbModel(this.name, this.schema);
   }
 
   isNeedAutoIncrement() {
-    return true;
+    return false;
   }
 
   /**

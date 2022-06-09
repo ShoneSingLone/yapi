@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 class stroageModel extends baseModel {
   constructor() {
     super()
-    let storageCol = mongoose.connection.db.collection('storage');
+    let storageCol =yapi.db.collection('storage');
     storageCol.createIndex(
       {
         key: 1

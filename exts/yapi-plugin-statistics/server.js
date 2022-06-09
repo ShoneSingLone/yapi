@@ -7,27 +7,26 @@ const controller = require('./controller');
 const statisModel = require('./statisMockModel.js');
 const commons = require('./util.js');
 
-module.exports = function() {
-  yapi.connect.then(function() {
-    let Col = mongoose.connection.db.collection('statis_mock');
-    Col.createIndex({
-      interface_id: 1
-    });
-    Col.createIndex({
-      project_id: 1
-    });
-    Col.createIndex({
-      group_id: 1
-    });
-    Col.createIndex({
-      time: 1
-    });
-    Col.createIndex({
-      date: 1
-    });
+module.exports = function () {
+
+  let Col = yapi.db.collection('statis_mock');
+  Col.createIndex({
+    interface_id: 1
+  });
+  Col.createIndex({
+    project_id: 1
+  });
+  Col.createIndex({
+    group_id: 1
+  });
+  Col.createIndex({
+    time: 1
+  });
+  Col.createIndex({
+    date: 1
   });
 
-  this.bindHook('add_router', function(addRouter) {
+  this.bindHook('add_router', function (addRouter) {
     addRouter({
       controller: controller,
       method: 'get',
@@ -56,7 +55,7 @@ module.exports = function() {
   });
 
   // MockServer生成mock数据后触发
-  this.bindHook('mock_after', function(context) {
+  this.bindHook('mock_after', function (context) {
     let interfaceId = context.interfaceData._id;
     let projectId = context.projectData._id;
     let groupId = context.projectData.group_id;

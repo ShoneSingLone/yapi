@@ -158,8 +158,8 @@ class baseController {
   }
   
   async checkRegister() {
-    // console.log('config', yapi.WEBCONFIG);
-    if (yapi.WEBCONFIG.closeRegister) {
+    // console.log('config', yapi.configs);
+    if (yapi.configs.closeRegister) {
       return false;
     } else {
       return true;
@@ -167,11 +167,11 @@ class baseController {
   }
 
   async checkLDAP() {
-    // console.log('config', yapi.WEBCONFIG);
-    if (!yapi.WEBCONFIG.ldapLogin) {
+    // console.log('config', yapi.configs);
+    if (!yapi.configs.ldapLogin) {
       return false;
     } else {
-      return yapi.WEBCONFIG.ldapLogin.enable || false;
+      return yapi.configs.ldapLogin.enable || false;
     }
   }
   /**

@@ -144,7 +144,7 @@ function mockValidator(interfaceData, ctx) {
 module.exports = async (ctx, next) => {
   // no used variable 'hostname' & 'config'
   // let hostname = ctx.hostname;
-  // let config = yapi.WEBCONFIG;
+  // let config = yapi.configs;
   let path = ctx.path;
   let header = ctx.request.header;
 
